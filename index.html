@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- chapter 38 to 42
+
+    Question 2
+
+    Input Year: <input type="text" id = "year"/> 
+      
+    <input type="button" id="button" onClick="isLeapYear()"
+            value="Check Leap Year"> 
+      
+    <p id="GFG"></p>  -->
+
+    <!-- ======================== -->
+    <!-- Question 2 chapter 43 to 48 -->
+    <!-- <a href="#" onClick="popup('Salam')">Click</a> -->
+       
+
+
+    <!-- <img src="data:image/jpeg;base64,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" onClick="alert('Hello world!');">
+<img src="https://images.samsung.com/is/image/samsung/in-galaxy-note10-lite-sm-n770-8gb-sm-n770fzsninu-backauraglow-thumb-206236860?$PF_PRD_PNG$" onClick="alert('Hello world!');" alt="">
+<img src="https://images.samsung.com/is/image/samsung/p5/ph/support/home/support-kv-pc.png?$ORIGIN_PNG$" onclick="alert('salam')" alt="">
+     -->
+
+<!-- ======================================= -->
+<!-- Question 3 chapter 43 to 48
+<br> -->
+<!-- <table id="myTable">
+    <tr> -->
+      <!-- <td>kamran </td> -->
+      <!-- <td>khan</td>  -->
+      <!-- <td>50</td>
+    </tr>
+    <tr>
+      <td>Shams</td>
+      <td>jaan</td>
+      <td>94</td>
+    </tr> -->
+    <!-- <tr>
+      <td>Umair</td>
+      <td>pehalwan</td>
+      <td>80</td>
+    </tr>
+  </table> -->
+  
+  <!-- <p>
+  <input type="button" value="Delete one Row"
+  onclick="foo()"> -->
+  <!-- </p>  -->
+  <!-- =========================================== -->
+  <!-- question 4 chapter 43 to 48
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQq7yHkdd3ovNtlHdo6QG-0YvUKzEU1HwdPFA&usqp=CAU" onMouseover="src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvjFehmho7fnhGF0Ci45-5m5hJU3QHbo04Fw&usqp=CAU'"
+  onMouseout="src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQq7yHkdd3ovNtlHdo6QG-0YvUKzEU1HwdPFA&usqp=CAU'"> -->
+
+<!-- ========================================================== -->
+
+<!-- question 5 chapter 43 to 48 -->
+
+<!-- <div > -->
+
+    <!-- <h3>click to increase</h3>
+    <button id="clickme">Click me: 0</button>
+  </div>
+
+  <div > -->
+<!-- 
+    <h3>click to decrease</h3>
+    <button id="decrease">Click me: 0</button>
+  </div> -->
+  <!-- ======================================= -->
+
+  <!-- Question 1 chapter 49 to 52 -->
+
+  <!-- <h1 style="text-align: center"> REGISTRATION FORM </h1>           
+<form name="RegForm" action="">  
+      
+    <p>Name: <input type="text" size=65 name="Name"> </p><br>        
+    <p> Address: <input type="text" size=65 name="Address">  </p><br> 
+    <p>E-mail Address: <input type="text" size=65 name="EMail">  </p><br> 
+     <p>Password: <input type="text" size=65 name="Password"> </p><br> 
+    <p>Telephone: <input type="text" size=65 name="Telephone"> </p><br>   
+           
+    <p>SELECT YOUR COURSE    
+        <select type="text" value="" name="Subject"> 
+            <option>BTECH</option> 
+            <option>BBA</option> 
+            <option>BCA</option> 
+            <option>B.COM</option> 
+            
+        </select></p><br><br> 
+    <p>Comments:  <textarea cols="55" name="Comment">  </textarea></p> 
+    <p><input type="submit" value="send" name="Submit">      
+        <input type="reset" value="Reset" name="Reset">   
+    </p>          
+</form>  -->
+<!-- ========================================= -->
+<!-- Question 2 chapter 49 to 52 -->
+
+<!-- <p id="some">
+  <b>Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.
+  <a href="#" onClick="more();"><b>Click for more.</a>
+  </p> -->
+
+  <!-- ===================================================== -->
+
+<!-- Question 3 chapter 49 to 52 -->
+
+<!-- <div id="wrapper">
+  <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+  <tr>
+  <th>Name</th>
+  <th>Country</th>
+  <th>Age</th>
+  </tr>
+  
+  <tr id="row1">
+  <td id="name_row1">Danish</td>
+  <td id="country_row1">Pakistan</td>
+  <td id="age_row1">30</td>
+  <td>
+  <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+  <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+  <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+  </td>
+  </tr>
+  
+  <tr id="row2">
+  <td id="name_row2">Farrukh</td>
+  <td id="country_row2">Saudi Arabia</td>
+  <td id="age_row2">26</td>
+  <td>
+  <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+  <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+  <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+  </td>
+  </tr>
+  
+  <tr id="row3">
+  <td id="name_row3">Shaheryar</td>
+  <td id="country_row3">Turkey</td>
+  <td id="age_row3">19</td>
+  <td>
+  <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+  <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+  <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+  </td>
+  </tr>
+  
+  <tr>
+  <td><input type="text" id="new_name"></td>
+  <td><input type="text" id="new_country"></td>
+  <td><input type="text" id="new_age"></td>
+  <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+  </tr>
+  
+  </table>
+  </div> -->
+
+  <!-- ================================================================== -->
+
+ <!-- Question 1 chapter 52 to 57 -->
+
+ <!-- <p>
+  <button type="button" onclick="zoomin1()">Zoom In</button>
+  <button type="button" onclick="zoomout1()">Zoom Out</button>
+
+  <img src="greycar.png" id="greyCar" width="180" alt="grey car">
+ 
+  <button type="button" onclick="zoomin2()">Zoom In</button>
+  <button type="button" onclick="zoomout2()">Zoom Out</button>
+
+  <img src="blackcar.jpg" id="blackCar" width="180" alt="black car">
+
+  <button type="button" onclick="zoomin3()">Zoom In</button>
+  <button type="button" onclick="zoomout3()">Zoom Out</button>
+
+  <img src="yellowcar.png" id="yellowCar" width="180" alt="yellow car">
+
+  <button type="button" onclick="zoomin3()">Zoom In</button>
+  <button type="button" onclick="zoomout3()">Zoom Out</button>
+
+  <img src="greencar.png" id="greenCar" width="180" alt="green car">
+</p> -->
+
+<!-- ================================================================ -->
+
+<!-- Question 2 chapter 52 to 57 -->
+
+<!-- <input type="button" value="+" onClick="zoomIn()"/>
+<input type="button" value="-" onClick="zoomOut()"/>
+<p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut itaque nobis voluptates? Animi omnis numquam maiores deserunt ratione dolores, repellat nemo nisi fuga minima explicabo, velit, et perspiciatis suscipit quasi!</p> -->
+
+<!-- ================================================================= -->
+
+<!-- Question 1 chapter 58 to 67 -->
+
+<!-- <div>
+  <h1> DOM </h1>
+  <div id="form-content" class="content">
+  <label for="first-name">First Name</label>
+  <input type="text" id="first-name" />
+  <label for="last-name">Last Name</label>
+  <input type="text" id=”last-name” />
+  <label for="email">Email</label>
+  <input type="text" id="email" />
+  </div>
+  <div id="main-content" class="content">
+  <p class="render"> First Name : Alex</p>
+  <p class="render" id="lastName">Last Name: Bank</p>
+  <p class="render"> Email : alexbank@example.com</p>
+  <p class="render"> Country : Pakistan </p>
+  <p class="render"> contact : +92 300 1234567</p>
+  </div>
+  </div> -->
+
+
+  
+
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
